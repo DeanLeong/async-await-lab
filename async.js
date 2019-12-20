@@ -1,5 +1,5 @@
 // Async Await Lab
-// (API Docs)[https://recipix.tech/api/docs]
+// (API Docs)[https://recipix.app/api/docs]
 // PART 1: Read Recipe Name
 
 findRecipes('banana+nut+bread');
@@ -11,7 +11,7 @@ async function findRecipes(recipeName) {
   };
   try {
     let response = await axios.get(
-      `https://recipix.tech/api/search/?q=${recipeName}`
+      `https://recipix.app/api/search/?q=${recipeName}`
     );
 
     // PART 4 - Display multiple recipes
