@@ -1,43 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Recipix</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    />
-  </head>
-  <body class="container">
-    <h3>Recipes</h3>
-    <div>
-      <form id="recipe-form">
-        <input
-          type="text"
-          name="recipes"
-          value=""
-          placeholder="Find recipes"
-          id="recipe-search"
-        />
-        <input
-          class="btn btn-primary"
-          type="submit"
-          value="Get Recipes"
-          id="getRecipes"
-        />
-      </form>
-    <div> 
-      <div class="row" id="recipes">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title" id="recipe-title">Recipe title</h5>
-            <ul class="card-text" id="recipe-ingredients"></ul>
-            <a href="#" id="recipe-url" class="btn btn-primary">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://unpkg.com/axios/dist/axios.min"></script>
-    <script src="async.js"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+</head>
+
+<body>
+  <h1>Countries</h1>
+
+  <div>
+    <form id="country-form">
+      <input 
+        type="text" 
+        name="country" 
+        placeholder="Find Country" 
+        id="country-search" 
+      />
+      <input 
+        type="submit" 
+        placeholder="Get Country" 
+        id="getCountry" 
+      />
+    </form>
+  </div>
+
+  <div 
+    style="margin-top: 25px;"
+     id="country-data">
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+
 </html>
