@@ -1,13 +1,15 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Async Await - Recipe Lab
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Async Await - Country Lab
 
 <img src="https://media.giphy.com/media/4lQnwnB9hVXlm/giphy.gif" height='200px' />
 
-## Exercise Labs
+## Directions
 
-- EXERCISE: Fetching Recipes - 5min
-- EXERCISE: Fetching Ingredients - 10min
-- EXERCISE: Fetching Recipes from Ingredients - 15min
-- EXERCISE: Fetching Multiple Recipes - 15min
+1. Fetch Country data
+1. Rewrite using Try/Catch & Async/Await
+1. Create dynamic HTML
+1. Append Country data
+1. Dynamically search country using HTML form
+1. Remove previous country data
 
 ## Overview of key words
 
@@ -15,7 +17,7 @@
 - `await`
 - `try/catch`
 
-```
+```js
 try {
   // request
 } catch(err) {
@@ -23,89 +25,61 @@ try {
 }
 ```
 
-## Intro To Recipix Lab
+# Async/Await Country Lab
 
-**Become a Master Chef!**
+> Welcome, Developer! Today we are testing a new Country API.
 
-> Welcome, Developer! Today we are testing a new Recipe API.
-
-<details>
-  <summary><strong>Q: How do we fetch async data?</strong></summary>
-
-A: `try` to use `await` in an `async` function.
+## Step 1: Fetch Country data
 
 ```javascript
-async function fetchData() {
-  try {
-    let response = api.get('https://recipix.app/search?q=banana');
-    let result = await response.data;
-  } catch (err) {
-    console.log(err);
-  }
+function fetchData(country) {
+// Get country data
+  const url = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`
+  // Write the rest of the code here.
+}
+```
+## Step 2: Rewrite function using Try/Catch & Async/Await
+
+```javascript
+// Convert this starter code
+function fetchData(country) {
+  const url = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`
+  // Write the rest of the code here.
 }
 ```
 
-B: Or we could use `.then()` syntax.
+## Step 3: Show Country Data
+
+Show the country data.
 
 ```javascript
-function fetchData() {
-  let response = api
-    .get('https://recipix.app/search?q=banana')
-    .then(response => {
-      console.log(response.data);
-    })
-    .catch(err => {
-      console.log(err);
-    });
-}
-```
-
-</details>
-
-## PART 1 - Fetch Recipe Data
-
-Using an async request, show a recipe's title and link on your website.
-
-```javascript
-async function findRecipes(recipeName) {
-  // read recipe
-  let response = await axios.get(
-    `https://recipix.app/api/search/?q=${recipeName}`
-  );
-
-  // document.getElementById('recipe-title').innerHTML = ???
-  // document.getElementById('recipe-url').href = ???
-
-  return response;
-}
-```
-
-## PART 2 - Display Recipe Ingredients
-
-Show all the current recipe's ingredients.
-
-```javascript
-function showIngredients(recipe) {
+function showCountryData(data) {
   // ???
 }
 ```
 
-## PART 3 - Display Recipe from Ingredients
+## Step 4: Append Country Data
 
-For each ingredient displayed, add the `click` event listener that will search for new recipes, using the selected ingredient.
+Append the country data using the previously written function.
 
-## PART 4 - Display Multiple Recipes
+```javascript
+function showCountryData(data) {
+  // Add more code from Step 3
+}
+```
+## Step 5: Dynamically search country using HTML form with eventHandler
 
-Each time we request recipes, we get an array inside the `results` array.
-How would you display all ten `results` at once?
-Use the existing functions `findRecipes` and `showIngredients` to display all ten recipe results.
+Display country data using the provided search bar.
 
-## PART 5 - Display Search bar results
+## Step 6: Remove previous country data
 
-Try to display recipes using a search bar for text input.
-HINT: Start by uncommenting the search bar in index.html
+```javascript
+function removeCountry() {
+ // write code here
+}
+```
 
 ## Resources
 
 - [Async Await](https://javascript.info/async-await)
-- [Recipix API Docs](https://recipix.app/api/docs)
+- [Try...Catch MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
