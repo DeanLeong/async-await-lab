@@ -3,19 +3,37 @@
 
 // Step 1: Fetch Country data using .then()
 
-function fetchData(country) {
-// Get country data
-  const url = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`
-  // Write code here.
-}
+// function fetchData(country) {
+// // Get country data
+//   const url = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`
+//   // Write code here.
+//   axios.get(url)
+//     .then((res) => {
+//       console.log(res)
+//     })
+//     .catch((error) => {
+//       console.log(`Error: ${error}`)
+//     }) 
+// }
+
+// fetchData("Spain")
 
 // Step 2: Rewrite Step 1 using Try/Catch & Async/Await
 // Be sure to comment out your Step 1 function before writing the new function
 
-function fetchData(country) {
-  const url = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`
-  // Write code here.
+async function fetchData(country) {
+  
+  try {
+    const url = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`
+    const response = await axios.get(url)
+    console.log(response)
+    return response
+  } catch (error) {
+    console.log(`Error: ${error}`)
+  }
 }
+
+fetchData("Spain")
 // Step 3: Create dynamic HTML
 
 function showCountryData(data) {
