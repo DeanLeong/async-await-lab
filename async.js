@@ -22,12 +22,12 @@
 // Be sure to comment out your Step 1 function before writing the new function
 
 async function fetchData(country) {
-  
   try {
     const url = `https://restcountries.eu/rest/v2/name/${country}?fullText=true`
     const response = await axios.get(url)
-    console.log(response)
-    return response
+    // console.log(response.data[0])
+    const data = response.data[0]
+    console.log(data)
   } catch (error) {
     console.log(`Error: ${error}`)
   }
@@ -53,6 +53,6 @@ function showCountryData(data) {
 // Step 6: Remove previous country data
 
 function removeCountry() {
- // write code here
- // Make sure to call this function???
+  // write code here
+  // Make sure to call this function???
 }
